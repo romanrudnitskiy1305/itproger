@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title%} Main page{% endblock %}
+
+{% block content%}
+<div class="features">
+    <h1>{{h1}}</h1>
+    {% for el in values %}
+        <p>{{el}}</p>
+    {% endfor %}
+    <button class="btn btn-warning"> as ds </button>
+</div>
+<!--    {% include 'main/test.html' %}-->
+{% endblock %}

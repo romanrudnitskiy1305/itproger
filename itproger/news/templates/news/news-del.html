@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title%} Delete news {% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>Delete news</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="alert alert-warning">
+                {{ artiles.date }}
+                <h3>{{ artiles.title }}</h3>
+                <p>{{ artiles.anons }}</p>
+            </div>
+            <button class="btn btn-success" type="submit">Delete news</button>
+        </form>
+    </div>
+{% endblock %}
